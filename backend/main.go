@@ -13,7 +13,7 @@ func main() {
 	flag.Parse()
 
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello from backend %d", listenPort)
+		fmt.Fprintf(w, "Hello from backend listening on %d", listenPort)
 	})
 
 	fmt.Printf("i'm a backend, will listen on port %d\n", listenPort)
